@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "api/avn-cloud.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/avn-cloud", "dest": "/api/avn-cloud.js" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
